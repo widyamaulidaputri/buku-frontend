@@ -137,7 +137,7 @@ export default {
   },
   methods: {
     getAnggota() {
-      axios.get(`http://localhost/buku/selectanggotabynomor.php${this.nomor}`)
+      axios.get(`https://buku--widyamaulidaput.repl.co/selectanggotabynomor.php${this.nomor}`)
           .then(response => {
             this.anggotaList = [response.data]
           })
@@ -155,7 +155,7 @@ export default {
         tanggal_terdaftar: this.tanggalTerdaftarInsert,
       }
 
-      axios.post('http://localhost/buku/insertanggota.php', newAnggota)
+      axios.post('https://buku--widyamaulidaput.repl.co/insertanggota.php', newAnggota)
           .then(response => {
             this.clearInsertForm()
             this.getAnggotaList()
@@ -174,7 +174,7 @@ export default {
         tanggal_terdaftar: this.tanggalTerdaftarUpdate,
       }
 
-      axios.put(`http://localhost/buku/updateanggota.php${this.nomorUpdate}`, updatedAnggota)
+      axios.put(`https://buku--widyamaulidaput.repl.co/updateanggota.php${this.nomorUpdate}`, updatedAnggota)
           .then(response => {
             this.clearUpdateForm()
             this.getAnggotaList()
@@ -184,7 +184,7 @@ export default {
           })
     },
     deleteAnggota() {
-      axios.delete(`http://localhost/buku/deleteanggota.php${this.nomorDelete}`)
+      axios.delete(`https://buku--widyamaulidaput.repl.co/deleteanggota.php${this.nomorDelete}`)
           .then(response => {
             this.clearDeleteForm()
             this.getAnggotaList()
@@ -194,7 +194,7 @@ export default {
           })
     },
     getAnggotaList() {
-      axios.get('http://localhost/buku/selectanggota.php')
+      axios.get('https://buku--widyamaulidaput.repl.co/selectanggota.php')
           .then(response => {
             this.anggotaList = response.data
           })
