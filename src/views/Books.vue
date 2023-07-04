@@ -150,7 +150,7 @@ export default {
       formData.append('harga', this.bookPrice);
       formData.append('file_cover', this.bookCover);
 
-      axios.post('http://localhost/buku/insertbuku.php',)
+      axios.post('https://buku--widyamaulidaput.repl.co/insertbuku.php',)
           .then(response => {
             this.getBooks();
             this.resetForm();
@@ -172,7 +172,7 @@ export default {
     },
     deleteBook(book) {
       // Implement logic for deleting a book
-      axios.delete('http://localhost/buku/deletebukubykode.php', )
+      axios.delete('https://buku--widyamaulidaput.repl.co/deletebukubykode.php', )
           .then(response => {
             this.getBooks();
             this.resetForm();
