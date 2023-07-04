@@ -117,7 +117,7 @@ export default {
   },
   methods: {
     getBooks() {
-      axios.get('http://localhost/buku/selectbuku.php')
+      axios.get('https://buku--widyamaulidaput.repl.co/selectbuku.php')
           .then(response => {
             this.books = response.data;
           })
