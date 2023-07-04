@@ -30,6 +30,9 @@
         </div>
         <button type="submit" class="btn btn-success">Add</button>
       </form>
+      <input type="number" v-model="selectedPeminjaman" />
+    <button @click="selectPeminjaman" type="submit" class="btn btn-primary">Pilih Peminjaman</button>
+    <h3>List Peminjaman (Dipinjam)</h3>
       <h2>Data Pengembalian Buku</h2>
       <form @submit.prevent="submitPengembalian">
         <div class="form-group">
