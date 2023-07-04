@@ -121,7 +121,7 @@ export default {
   },
   methods: {
     submitPeminjaman() {
-      fetch('http://localhost/buku/peminjaman_buku.php', {
+      fetch('https://buku--widyamaulidaput.repl.co/peminjaman_buku.php', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -139,7 +139,7 @@ export default {
           });
     },
     submitPengembalian() {
-      fetch('http://localhost/buku/pengembalian_buku.php', {
+      fetch('https://buku--widyamaulidaput.repl.co/pengembalian_buku.php', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -158,7 +158,7 @@ export default {
     },
     fetchPeminjamanDipinjam() {
       // Panggil API backend PHP untuk mendapatkan data peminjaman dengan status DIPINJAM
-      axios.get('http://localhost/buku/listpeminjaman_dipinjam.php')
+      axios.get('https://buku--widyamaulidaput.repl.co/listpeminjaman_dipinjam.php')
           .then((response) => {
             this.peminjamanDipinjam = response.data;
           })
@@ -168,7 +168,7 @@ export default {
     },
     fetchPeminjamanDikembalikan() {
       // Panggil API backend PHP untuk mendapatkan data peminjaman dengan status DIKEMBALIKAN
-      axios.get( 'http://localhost/buku/listpeminjaman_dikembalikan.php')
+      axios.get( 'https://buku--widyamaulidaput.repl.co/listpeminjaman_dikembalikan.php')
           .then((response) => {
             this.peminjamanDikembalikan = response.data;
           })
