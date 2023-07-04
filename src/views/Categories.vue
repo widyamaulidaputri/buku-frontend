@@ -73,7 +73,7 @@ export default {
   },
   methods: {
     fetchKategoris() {
-      axios.get('http://localhost/buku/selectkategori.php')
+      axios.get('https://buku--widyamaulidaput.repl.co/selectkategori.php')
           .then((response) => {
             this.kategoris = response.data;
           })
@@ -105,7 +105,7 @@ export default {
     submitForm() {
       if (this.form.id) {
         // Memanggil API untuk update kategori
-        axios.put(`http://localhost/buku/updatekategoribykode.php${this.form.id}`, this.form)
+        axios.put(`https://buku--widyamaulidaput.repl.co/updatekategoribykode.php${this.form.id}`, this.form)
             .then(() => {
               this.hideModal();
               this.fetchKategoris();
@@ -115,7 +115,7 @@ export default {
             });
       } else {
         // Memanggil API untuk insert kategori baru
-        axios.post('http://localhost/buku/insertkategori.php', this.form)
+        axios.post('https://buku--widyamaulidaput.repl.co/insertkategori.php', this.form)
             .then(() => {
               this.hideModal();
               this.fetchKategoris();
@@ -128,7 +128,7 @@ export default {
     deleteKategori(kode) {
       if (confirm('Anda yakin ingin menghapus kategori ini?')) {
         // Memanggil API untuk delete kategori
-        axios.delete(`http://localhost/buku/deletekategoribykode.php/${kode}`)
+        axios.delete(`https://buku--widyamaulidaput.repl.co/deletekategoribykode.php${kode}`)
             .then(() => {
               this.fetchKategoris();
             })
