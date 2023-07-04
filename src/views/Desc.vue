@@ -138,6 +138,19 @@ export default {
             // Lakukan tindakan jika terjadi kesalahan saat melakukan peminjaman
           });
     },
+    selectPeminjaman() {
+      try {
+        axios.get(`widyamaulidaput.repl.co/select_detail_id.php=${this.selectedNumber}`);
+        if (response.ok) {
+          const data = response.json();
+          console.log(data);
+        } else {
+          console.error("Gagal memuat data id Peminjaman");
+        }
+      } catch (error) {
+        console.error(error);
+      }
+    },
     submitPengembalian() {
       fetch('https://buku--widyamaulidaput.repl.co/pengembalian_buku.php', {
         method: 'POST',
