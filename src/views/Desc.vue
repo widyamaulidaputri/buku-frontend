@@ -140,7 +140,7 @@ export default {
     },
     selectPeminjaman() {
       try {
-        axios.get(`widyamaulidaput.repl.co/select_detail_id.php=${this.selectedNumber}`);
+        axios.get(`https://buku--widyamaulidaput.repl.co/select_detail_id.php=${this.selectedNumber}`);
         if (response.ok) {
           const data = response.json();
           console.log(data);
