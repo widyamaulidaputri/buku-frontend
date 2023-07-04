@@ -13,6 +13,10 @@
           <li class="nav-item">
             <router-link to="/Member" class="nav-link text-white">Member</router-link>
           </li>
+          <li class="nav-item">
+            <router-link to="/desc" class="nav-link text-white">Description</router-link>
+          </li><li class="nav-item">
+        </li>
         </ul>
       </div>
     </nav>
